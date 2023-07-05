@@ -1,0 +1,78 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+.gradient-background {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(#55d0ff, #ff9fb3);
+}
+
+.panel {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow-y: auto;
+}
+
+@media screen and (width >= 992px) {
+  .gradient-background {
+    width: calc(100% - 360px);
+    height: 100vh;
+  }
+
+  .panel {
+    width: 360px;
+  }
+}
+
+#mode-toggle {
+  position: absolute;
+  top: 8px;
+  left: 5px;
+}
+
+.btn.btn-about {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.btn.btn-about:active {
+  border-color: transparent;
+}
+
+#collapse-about {
+  position: absolute;
+  top: 48px;
+  right: 15px;
+}
+
+input[type="color"] {
+  width: 60px;
+  height: 60px;
+  border-radius: 2px;
+}
+
+#random {
+  border-bottom: 1px solid #ddd;
+}
+
+.bg-code {
+  font-family: "Fira Code", monospace;
+  border: 1px solid #dddddd;
+  border-radius: 12px;
+}
