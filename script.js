@@ -27,13 +27,21 @@ const setGradientBackground = () => {
     "background",
     `linear-gradient(${color1.val()}, ${color2.val()})`
   );
+  $(".bg-code").text(
+    `background: linear-gradient(${color1.val()}, ${color2.val()});`
+  );
 };
+
+color1.on("input", () => {
+  setGradientBackground();
+});
+
+color2.on("input", () => {
+  setGradientBackground();
+});
 
 $(".btn-random").on("click", () => {
   color1.val(randomColor());
   color2.val(randomColor());
   setGradientBackground();
-  $(".bg-code").text(
-    `background: linear-gradient(${color1.val()}, ${color2.val()});`
-  );
 });
