@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
   <head>
     <!-- required meta tags -->
     <meta charset="utf-8" />
@@ -64,33 +64,114 @@
           <div class="container">
             <h2 class="fw-bold my-5 mb-4">Gradient Background Generator</h2>
             <div
-              class="container d-flex justify-content-center gap-4 py-3"
+              class="container d-flex flex-column justify-content-center gap-3 py-3"
               id="colors"
             >
-              <input
-                type="color"
-                name="color-1"
-                class="color-1"
-                value="#55d0ff"
-              />
-              <input
-                type="color"
-                name="color-2"
-                class="color-2"
-                value="#ff9fb3"
-              />
+              <h3>Colors:</h3>
+              <div class="container d-flex justify-content-between px-0">
+                <div
+                  class="container-fluid d-flex align-items-center gap-4 ps-0 color-wrapper"
+                >
+                  <label for="color-1" class="color-picker">
+                    <input
+                      type="color"
+                      name="color-1"
+                      class="color-1"
+                      id="color-1"
+                      value="#55d0ff"
+                    />
+                  </label>
+                  <div class="color-code-1">
+                    <pre class="m-0 p-2 css-code"><code>#55d0ff</code></pre>
+                  </div>
+                </div>
+                <button class="btn btn-secondary btn-random" id="btn-random-1">
+                  Random
+                </button>
+              </div>
+              <div class="container d-flex justify-content-between px-0">
+                <div
+                  class="container-fluid d-flex align-items-center gap-4 ps-0 color-wrapper"
+                >
+                  <label for="color-2" class="color-picker">
+                    <input
+                      type="color"
+                      name="color-2"
+                      class="color-2"
+                      id="color-2"
+                      value="#ff9fb3"
+                    />
+                  </label>
+                  <div class="color-code-2">
+                    <pre class="m-0 p-2 css-code"><code>#ff9fb3</code></pre>
+                  </div>
+                </div>
+                <button class="btn btn-secondary btn-random" id="btn-random-2">
+                  Random
+                </button>
+              </div>
             </div>
             <div
-              class="container d-flex justify-content-center py-3"
-              id="random"
+              class="container d-flex flex-column justify-content-center gap-3 py-3"
+              id="direction"
             >
-              <button class="btn btn-secondary btn-random">Random</button>
+              <h3>Direction:</h3>
+              <div class="container">
+                <div class="row row-cols-2">
+                  <div class="radio-direction">
+                    <input
+                      type="radio"
+                      class="input-direction"
+                      id="to-bottom"
+                      name="direction"
+                      checked
+                    />
+                    <label class="custom-control-label" for="to-bottom"
+                      >Bottom</label
+                    >
+                  </div>
+
+                  <div class="radio-direction">
+                    <input
+                      type="radio"
+                      class="input-direction"
+                      id="to-top"
+                      name="direction"
+                    />
+                    <label class="custom-control-label" for="to-top">Top</label>
+                  </div>
+
+                  <div class="radio-direction">
+                    <input
+                      type="radio"
+                      class="input-direction"
+                      id="to-left"
+                      name="direction"
+                    />
+                    <label class="custom-control-label" for="to-left"
+                      >Left</label
+                    >
+                  </div>
+
+                  <div class="radio-direction">
+                    <input
+                      type="radio"
+                      class="input-direction"
+                      id="to-right"
+                      name="direction"
+                    />
+                    <label class="custom-control-label" for="to-right"
+                      >Right</label
+                    >
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="container mt-4" id="code">
-              <h3 class="">CSS rule:</h3>
+            <div class="container py-3" id="code">
+              <h3>CSS rule:</h3>
               <pre
-                class="p-2 bg-code"
-              ><code>background: linear-gradient(to-bottom, #55d0ff, #ff9fb3);</code></pre>
+                class="p-2 code-preview css-code" id="code-preview"
+              ><code>background: linear-gradient(to bottom, #55d0ff, #ff9fb3);</code></pre>
             </div>
             <div
               class="position-absolute d-flex justify-content-end align-items-center d-inline-block"

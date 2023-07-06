@@ -15,6 +15,10 @@ body {
   font-family: "Rubik", sans-serif;
 }
 
+ion-icon {
+  font-size: 16px;
+}
+
 .gradient-background {
   width: 100vw;
   height: 100vh;
@@ -55,25 +59,27 @@ body {
   right: 15px;
 }
 
+.color-wrapper {
+  height: 48px;
+}
+
+.color-picker {
+  height: 100%;
+}
+
 input[type="color"] {
-  width: 60px;
-  height: 60px;
+  height: 100%;
   border-radius: 2px;
 }
 
-#random {
-  border-bottom: 1px solid #ddd;
-}
-
-.bg-code {
+.css-code {
   font-family: "Fira Code", monospace;
   font-size: 14px;
-  line-height: 21px;
   border: 1px solid #dddddd;
   border-radius: 12px;
 }
 
-.bg-code > code {
+.css-code > code {
   font-family: "Fira Code", monospace;
   font-size: 14px;
   line-height: 21px;
