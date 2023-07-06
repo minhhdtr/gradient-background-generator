@@ -5,15 +5,19 @@ $(document).on("click", function (event) {
   }
 });
 
-$("#light-mode").on("click", () => {
-  document.documentElement.setAttribute("data-bs-theme", "light");
-});
-$("#dark-mode").on("click", () => {
-  document.documentElement.setAttribute("data-bs-theme", "dark");
+// toggle light/dark mode
+$(".btn.btn-toggle").on("click", () => {
+  if (document.documentElement.getAttribute("data-bs-theme") === "dark") {
+    document.documentElement.setAttribute("data-bs-theme", "light");
+  } else {
+    document.documentElement.setAttribute("data-bs-theme", "dark");
+  }
 });
 
 let color1 = $(".color-1"),
   color2 = $(".color-2");
+
+const directions = ["to top", "to right", "to bottom", "to left"];
 
 // generate random colors
 const randomColor = () => {
@@ -21,14 +25,14 @@ const randomColor = () => {
   return `#${color}`;
 };
 
-//
+// set gradient background and change css code content
 const setGradientBackground = () => {
   $(".gradient-background").css(
     "background",
     `linear-gradient(${color1.val()}, ${color2.val()})`
   );
   $(".bg-code").text(
-    `background: linear-gradient(${color1.val()}, ${color2.val()});`
+    `background: linear-gradient(to-bottom, ${color1.val()}, ${color2.val()});`
   );
 };
 

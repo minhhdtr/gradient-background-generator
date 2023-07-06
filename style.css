@@ -39,25 +39,19 @@ body {
   }
 }
 
-#mode-toggle {
-  position: absolute;
-  top: 8px;
-  left: 5px;
-}
-
-.btn.btn-about {
-  position: absolute;
+#buttons-wrapper {
   top: 5px;
   right: 5px;
 }
 
+.btn.btn-toggle:active,
 .btn.btn-about:active {
   border-color: transparent;
 }
 
 #collapse-about {
   position: absolute;
-  top: 48px;
+  top: 42px;
   right: 15px;
 }
 
@@ -73,6 +67,14 @@ input[type="color"] {
 
 .bg-code {
   font-family: "Fira Code", monospace;
+  font-size: 14px;
+  line-height: 21px;
   border: 1px solid #dddddd;
   border-radius: 12px;
+}
+
+.bg-code > code {
+  font-family: "Fira Code", monospace;
+  font-size: 14px;
+  line-height: 21px;
 }

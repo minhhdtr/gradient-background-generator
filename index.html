@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en">
   <head>
     <!-- required meta tags -->
     <meta charset="utf-8" />
@@ -61,8 +61,8 @@
       <div class="row w-100">
         <div class="gradient-background px-0"></div>
         <div class="panel px-0">
-          <div class="container mt-5">
-            <h2 class="fw-bold mb-4">Gradient Background Generator</h2>
+          <div class="container">
+            <h2 class="fw-bold my-5 mb-4">Gradient Background Generator</h2>
             <div
               class="container d-flex justify-content-center gap-4 py-3"
               id="colors"
@@ -87,59 +87,52 @@
               <button class="btn btn-secondary btn-random">Random</button>
             </div>
             <div class="container mt-4" id="code">
-              <h3 class="">CSS code</h3>
+              <h3 class="">CSS rule:</h3>
               <pre
                 class="p-2 bg-code"
-              ><code>background: linear-gradient(#55d0ff, #ff9fb3);</code></pre>
+              ><code>background: linear-gradient(to-bottom, #55d0ff, #ff9fb3);</code></pre>
             </div>
-            <button
-              class="btn btn-about"
-              role="button"
-              data-bs-toggle="collapse"
-              href="#collapse-about"
-              aria-expanded="false"
-              aria-controls="collapse-about"
+            <div
+              class="position-absolute d-flex justify-content-end align-items-center d-inline-block"
+              id="buttons-wrapper"
             >
-              <i class="fa-regular fa-circle-question"></i>
-            </button>
-            <div class="collapse" id="collapse-about">
-              <div class="card" style="width: 18rem">
-                <h5 class="card-header">Gradient Background Generator</h5>
-                <div class="card-body">
-                  <div class="card-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Odit enim cumque odio quisquam unde expedita doloribus
-                    quidem nemo consequuntur a minus nostrum, doloremque
-                    sapiente esse sint tempora exercitationem quis dolores!
+              <div class="container px-0" id="toggle-wrapper">
+                <button class="btn btn-toggle" role="button">
+                  <i class="fa-solid fa-moon"></i>
+                </button>
+              </div>
+              <div class="container px-0" id="about-wrapper">
+                <button
+                  class="btn btn-about"
+                  role="button"
+                  data-bs-toggle="collapse"
+                  href="#collapse-about"
+                  aria-expanded="false"
+                  aria-controls="collapse-about"
+                >
+                  <i class="fa-regular fa-circle-question"></i>
+                </button>
+                <div class="collapse" id="collapse-about">
+                  <div class="card" style="width: 18rem">
+                    <h5 class="card-header">Gradient Background Generator</h5>
+                    <div class="card-body">
+                      <div class="card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Odit enim cumque odio quisquam unde expedita doloribus
+                        quidem nemo consequuntur a minus nostrum, doloremque
+                        sapiente esse sint tempora exercitationem quis dolores!
+                      </div>
+                    </div>
+                    <div class="card-footer text-center">
+                      made with ❤️ by
+                      <a href="https://minhhdtr.github.io/" target="_blank"
+                        >duc minhh</a
+                      >
+                    </div>
                   </div>
-                </div>
-                <div class="card-footer text-center">
-                  made with ❤️ by
-                  <a href="https://minhhdtr.github.io/">duc minhh</a>
                 </div>
               </div>
             </div>
-          </div>
-          <!-- <button class="btn btn-dark shadow" id="btnSwitch">
-            Toggle Mode
-          </button> -->
-          <div class="dropdown" id="mode-toggle">
-            <button
-              class="btn btn-secondary btn-sm dropdown-toggle"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Light/Dark Mode
-            </button>
-            <ul class="dropdown-menu">
-              <li>
-                <a class="dropdown-item" id="light-mode">Light Mode</a>
-              </li>
-              <li>
-                <a class="dropdown-item" id="dark-mode">Dark Mode</a>
-              </li>
-            </ul>
           </div>
         </div>
       </div>
