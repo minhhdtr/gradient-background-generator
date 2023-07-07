@@ -1,215 +1,138 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
-  <head>
-    <!-- required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatiable" content="ie=edge" />
 
-    <!-- title -->
-    <title>gradient background generator</title>
+<head>
+  <!-- required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatiable" content="ie=edge" />
 
-    <!-- font awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+  <!-- title -->
+  <title>gradient background generator</title>
 
-    <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- jquery -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
-      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet" />
 
-    <!-- bootstrap -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-      crossorigin="anonymous"
-    />
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-      crossorigin="anonymous"
-    ></script>
+  <!-- jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+    integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <!-- custom css and js -->
-    <link rel="stylesheet" href="./style.css" />
-    <script defer src="./script.js"></script>
-  </head>
-  <body>
-    <div class="container-fluid px-0 d-flex flex-column flex-lg-row" id="main">
-      <div class="row w-100">
-        <div class="gradient-background px-0"></div>
-        <div class="panel px-0">
-          <div class="container">
-            <h2 class="fw-bold my-5 mb-4">Gradient Background Generator</h2>
-            <div
-              class="container d-flex flex-column justify-content-center gap-3 py-3"
-              id="colors"
-            >
-              <h3>Colors:</h3>
-              <div class="container d-flex justify-content-between px-0">
-                <div
-                  class="container-fluid d-flex align-items-center gap-4 ps-0 color-wrapper"
-                >
-                  <label for="color-1" class="color-picker">
-                    <input
-                      type="color"
-                      name="color-1"
-                      class="color-1"
-                      id="color-1"
-                      value="#55d0ff"
-                    />
-                  </label>
-                  <div class="color-code-1">
-                    <pre class="m-0 p-2 css-code"><code>#55d0ff</code></pre>
-                  </div>
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+
+  <!-- custom css and js -->
+  <link rel="stylesheet" href="./style.css" />
+  <script defer src="./script.js"></script>
+</head>
+
+<body>
+  <div class="container-fluid px-0 d-flex flex-column flex-lg-row" id="main">
+    <div class="row w-100">
+      <div class="gradient-background px-0"></div>
+      <div class="panel px-0">
+        <div class="container">
+          <h2 class="fw-bold my-5 mb-4" id="title">
+            Gradient Background Generator
+          </h2>
+          <div class="container d-flex flex-column justify-content-center gap-3 py-3" id="colors">
+            <h3>Colors:</h3>
+            <div class="container d-flex justify-content-between px-0">
+              <div class="container-fluid d-flex align-items-center gap-4 ps-0 color-wrapper">
+                <label for="color-1" class="color-picker">
+                  <input type="color" name="color-1" class="color-1" id="color-1" value="#55d0ff" />
+                </label>
+                <div class="color-code-1">
+                  <pre class="m-0 p-2 css-code"><code>#55d0ff</code></pre>
                 </div>
-                <button class="btn btn-secondary btn-random" id="btn-random-1">
-                  Random
-                </button>
               </div>
-              <div class="container d-flex justify-content-between px-0">
-                <div
-                  class="container-fluid d-flex align-items-center gap-4 ps-0 color-wrapper"
-                >
-                  <label for="color-2" class="color-picker">
-                    <input
-                      type="color"
-                      name="color-2"
-                      class="color-2"
-                      id="color-2"
-                      value="#ff9fb3"
-                    />
-                  </label>
-                  <div class="color-code-2">
-                    <pre class="m-0 p-2 css-code"><code>#ff9fb3</code></pre>
-                  </div>
-                </div>
-                <button class="btn btn-secondary btn-random" id="btn-random-2">
-                  Random
-                </button>
-              </div>
+              <button class="btn btn-secondary btn-random" id="btn-random-1">
+                Random
+              </button>
             </div>
-            <div
-              class="container d-flex flex-column justify-content-center gap-3 py-3"
-              id="direction"
-            >
-              <h3>Direction:</h3>
-              <div class="container">
-                <div class="row row-cols-2">
-                  <div class="radio-direction">
-                    <input
-                      type="radio"
-                      class="input-direction"
-                      id="to-bottom"
-                      name="direction"
-                      checked
-                    />
-                    <label class="custom-control-label" for="to-bottom"
-                      >Bottom</label
-                    >
-                  </div>
+            <div class="container d-flex justify-content-between px-0">
+              <div class="container-fluid d-flex align-items-center gap-4 ps-0 color-wrapper">
+                <label for="color-2" class="color-picker">
+                  <input type="color" name="color-2" class="color-2" id="color-2" value="#ff9fb3" />
+                </label>
+                <div class="color-code-2">
+                  <pre class="m-0 p-2 css-code"><code>#ff9fb3</code></pre>
+                </div>
+              </div>
+              <button class="btn btn-secondary btn-random" id="btn-random-2">
+                Random
+              </button>
+            </div>
+          </div>
+          <div class="container d-flex flex-column justify-content-center gap-3 py-3" id="direction">
+            <h3>Direction:</h3>
+            <div class="container">
+              <div class="row row-cols-2">
+                <div class="radio-direction">
+                  <input type="radio" class="input-direction" id="to-bottom" name="direction" value="0" checked />
+                  <label class="custom-control-label" for="to-bottom">Bottom</label>
+                </div>
 
-                  <div class="radio-direction">
-                    <input
-                      type="radio"
-                      class="input-direction"
-                      id="to-top"
-                      name="direction"
-                    />
-                    <label class="custom-control-label" for="to-top">Top</label>
-                  </div>
+                <div class="radio-direction">
+                  <input type="radio" class="input-direction" id="to-top" name="direction" value="1" />
+                  <label class="custom-control-label" for="to-top">Top</label>
+                </div>
 
-                  <div class="radio-direction">
-                    <input
-                      type="radio"
-                      class="input-direction"
-                      id="to-left"
-                      name="direction"
-                    />
-                    <label class="custom-control-label" for="to-left"
-                      >Left</label
-                    >
-                  </div>
+                <div class="radio-direction">
+                  <input type="radio" class="input-direction" id="to-left" name="direction" value="2" />
+                  <label class="custom-control-label" for="to-left">Left</label>
+                </div>
 
-                  <div class="radio-direction">
-                    <input
-                      type="radio"
-                      class="input-direction"
-                      id="to-right"
-                      name="direction"
-                    />
-                    <label class="custom-control-label" for="to-right"
-                      >Right</label
-                    >
-                  </div>
+                <div class="radio-direction">
+                  <input type="radio" class="input-direction" id="to-right" name="direction" value="3" />
+                  <label class="custom-control-label" for="to-right">Right</label>
                 </div>
               </div>
             </div>
-            <div class="container py-3" id="code">
-              <h3>CSS rule:</h3>
-              <pre
-                class="p-2 code-preview css-code" id="code-preview"
-              ><code>background: linear-gradient(to bottom, #55d0ff, #ff9fb3);</code></pre>
+          </div>
+          <div class="container py-3" id="code">
+            <h3>CSS rule:</h3>
+            <pre class="p-2 code-preview css-code"
+              id="code-preview"><code>background: linear-gradient(to bottom, #55d0ff, #ff9fb3);</code></pre>
+          </div>
+          <div class="position-absolute d-flex justify-content-end align-items-center d-inline-block"
+            id="buttons-wrapper">
+            <div class="container px-0" id="toggle-wrapper">
+              <button class="btn btn-toggle" role="button">
+                <i class="fa-solid fa-sun"></i>
+              </button>
             </div>
-            <div
-              class="position-absolute d-flex justify-content-end align-items-center d-inline-block"
-              id="buttons-wrapper"
-            >
-              <div class="container px-0" id="toggle-wrapper">
-                <button class="btn btn-toggle" role="button">
-                  <i class="fa-solid fa-moon"></i>
-                </button>
-              </div>
-              <div class="container px-0" id="about-wrapper">
-                <button
-                  class="btn btn-about"
-                  role="button"
-                  data-bs-toggle="collapse"
-                  href="#collapse-about"
-                  aria-expanded="false"
-                  aria-controls="collapse-about"
-                >
-                  <i class="fa-regular fa-circle-question"></i>
-                </button>
-                <div class="collapse" id="collapse-about">
-                  <div class="card" style="width: 18rem">
-                    <h5 class="card-header">Gradient Background Generator</h5>
-                    <div class="card-body">
-                      <div class="card-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Odit enim cumque odio quisquam unde expedita doloribus
-                        quidem nemo consequuntur a minus nostrum, doloremque
-                        sapiente esse sint tempora exercitationem quis dolores!
-                      </div>
+            <div class="container px-0" id="about-wrapper">
+              <button class="btn btn-about" role="button" data-bs-toggle="collapse" href="#collapse-about"
+                aria-expanded="false" aria-controls="collapse-about">
+                <i class="fa-regular fa-circle-question"></i>
+              </button>
+              <div class="collapse" id="collapse-about">
+                <div class="card" style="width: 18rem">
+                  <h5 class="card-header">Gradient Background Generator</h5>
+                  <div class="card-body">
+                    <div class="card-text">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Odit enim cumque odio quisquam unde expedita doloribus
+                      quidem nemo consequuntur a minus nostrum, doloremque
+                      sapiente esse sint tempora exercitationem quis dolores!
                     </div>
-                    <div class="card-footer text-center">
-                      made with ❤️ by
-                      <a href="https://minhhdtr.github.io/" target="_blank"
-                        >duc minhh</a
-                      >
-                    </div>
+                  </div>
+                  <div class="card-footer text-center">
+                    made with ❤️ by
+                    <a href="https://minhhdtr.github.io/" target="_blank">duc minhh</a>
                   </div>
                 </div>
               </div>
@@ -218,5 +141,7 @@
         </div>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>

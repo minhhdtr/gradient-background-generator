@@ -15,24 +15,22 @@ body {
   font-family: "Rubik", sans-serif;
 }
 
-ion-icon {
-  font-size: 16px;
-}
-
-.gradient-background {
-  width: 100vw;
-  height: 100vh;
-  background: linear-gradient(#55d0ff, #ff9fb3);
-}
-
+.gradient-background,
 .panel {
   width: 100vw;
   height: 100vh;
+}
+
+.gradient-background {
+  background: linear-gradient(to bottom, #55d0ff, #ff9fb3);
+}
+
+.panel {
   position: relative;
   overflow-y: auto;
 }
 
-@media screen and (width >= 992px) {
+@media screen and (width >=992px) {
   .gradient-background {
     width: calc(100% - 360px);
     height: 100vh;
@@ -65,21 +63,21 @@ ion-icon {
 
 .color-picker {
   height: 100%;
+  border-radius: 6px;
 }
 
 input[type="color"] {
   height: 100%;
-  border-radius: 2px;
 }
 
 .css-code {
   font-family: "Fira Code", monospace;
   font-size: 14px;
-  border: 1px solid #dddddd;
-  border-radius: 12px;
+  border: 1.5px solid #777777;
+  border-radius: 6px;
 }
 
-.css-code > code {
+.css-code>code {
   font-family: "Fira Code", monospace;
   font-size: 14px;
   line-height: 21px;

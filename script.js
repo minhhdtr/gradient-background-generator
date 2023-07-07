@@ -7,7 +7,7 @@ $(document).on("click", function (event) {
 
 // toggle light/dark mode
 $(".btn.btn-toggle").on("click", () => {
-  if (document.documentElement.getAttribute("data-bs-theme") === "dark") {
+  if (document.documentElement.getAttribute("data-bs-theme") == "dark") {
     $(".btn-toggle i").removeClass("fa-sun").addClass("fa-moon");
     document.documentElement.setAttribute("data-bs-theme", "light");
   } else {
@@ -34,7 +34,7 @@ const setCssCode = (color1, color2, direction) => {
   );
 };
 
-// set gradient background and change css code content
+// set gradient background and change color code content
 const setGradientBackground = (color1, color2, direction) => {
   $(".gradient-background").css(
     "background",
@@ -44,24 +44,45 @@ const setGradientBackground = (color1, color2, direction) => {
   $(".color-code-2 pre code").text(color2);
 };
 
+// set gradient background and change css code content
+const helper = (color1, color2, direction) => {
+  setGradientBackground(color1, color2, direction);
+  setCssCode(color1, color2, direction);
+};
+
 color1.on("input", () => {
-  setGradientBackground(color1.val(), color2.val(), directions[0]);
-  setCssCode(color1.val(), color2.val(), directions[0]);
+  helper(
+    color1.val(),
+    color2.val(),
+    directions[$('input[name="direction"]:checked').val()]);
 });
 
 color2.on("input", () => {
-  setGradientBackground(color1.val(), color2.val(), directions[0]);
-  setCssCode(color1.val(), color2.val(), directions[0]);
+  helper(
+    color1.val(),
+    color2.val(),
+    directions[$('input[name="direction"]:checked').val()]);
 });
 
 $("#btn-random-1").on("click", () => {
   color1.val(randomColor());
-  setGradientBackground(color1.val(), color2.val(), directions[0]);
-  setCssCode(color1.val(), color2.val(), directions[0]);
+  helper(
+    color1.val(),
+    color2.val(),
+    directions[$('input[name="direction"]:checked').val()]);
 });
 
 $("#btn-random-2").on("click", () => {
   color2.val(randomColor());
-  setGradientBackground(color1.val(), color2.val(), directions[0]);
-  setCssCode(color1.val(), color2.val(), directions[0]);
+  helper(
+    color1.val(),
+    color2.val(),
+    directions[$('input[name="direction"]:checked').val()]);
+});
+
+$('input[name="direction"]').on("change", () => {
+  helper(
+    color1.val(),
+    color2.val(),
+    directions[$('input[name="direction"]:checked').val()]);
 });
