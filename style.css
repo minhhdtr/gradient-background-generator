@@ -41,6 +41,10 @@ body {
   }
 }
 
+#title {
+  font-family: 'Nunito', sans-serif;
+}
+
 #buttons-wrapper {
   top: 5px;
   right: 5px;
@@ -68,6 +72,10 @@ body {
 
 input[type="color"] {
   height: 100%;
+}
+
+.btn-random {
+  height: 40px;
 }
 
 .css-code {

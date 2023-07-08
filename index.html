@@ -18,6 +18,8 @@
   <!-- google fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet" />
 
@@ -40,16 +42,16 @@
 
 <body>
   <div class="container-fluid px-0 d-flex flex-column flex-lg-row" id="main">
-    <div class="row w-100">
+    <div class="row w-100 m-0">
       <div class="gradient-background px-0"></div>
       <div class="panel px-0">
         <div class="container">
-          <h2 class="fw-bold my-5 mb-4" id="title">
+          <h2 class="fw-bold my-5" id="title">
             Gradient Background Generator
           </h2>
-          <div class="container d-flex flex-column justify-content-center gap-3 py-3" id="colors">
+          <div class="container d-flex flex-column justify-content-center gap-2 py-3 pt-0" id="colors">
             <h3>Colors:</h3>
-            <div class="container d-flex justify-content-between px-0">
+            <div class="container d-flex justify-content-between align-items-center px-0">
               <div class="container-fluid d-flex align-items-center gap-4 ps-0 color-wrapper">
                 <label for="color-1" class="color-picker">
                   <input type="color" name="color-1" class="color-1" id="color-1" value="#55d0ff" />
@@ -58,11 +60,11 @@
                   <pre class="m-0 p-2 css-code"><code>#55d0ff</code></pre>
                 </div>
               </div>
-              <button class="btn btn-secondary btn-random" id="btn-random-1">
+              <button class="btn btn-secondary px-2 btn-random" id="btn-random-1">
                 Random
               </button>
             </div>
-            <div class="container d-flex justify-content-between px-0">
+            <div class="container d-flex justify-content-between align-items-center px-0">
               <div class="container-fluid d-flex align-items-center gap-4 ps-0 color-wrapper">
                 <label for="color-2" class="color-picker">
                   <input type="color" name="color-2" class="color-2" id="color-2" value="#ff9fb3" />
@@ -71,41 +73,41 @@
                   <pre class="m-0 p-2 css-code"><code>#ff9fb3</code></pre>
                 </div>
               </div>
-              <button class="btn btn-secondary btn-random" id="btn-random-2">
+              <button class="btn btn-secondary px-2 btn-random" id="btn-random-2">
                 Random
               </button>
             </div>
           </div>
-          <div class="container d-flex flex-column justify-content-center gap-3 py-3" id="direction">
+          <div class="container d-flex flex-column justify-content-center gap-2 py-3" id="direction">
             <h3>Direction:</h3>
             <div class="container">
               <div class="row row-cols-2">
-                <div class="radio-direction">
+                <div class="radio-direction ps-0">
                   <input type="radio" class="input-direction" id="to-bottom" name="direction" value="0" checked />
                   <label class="custom-control-label" for="to-bottom">Bottom</label>
                 </div>
 
-                <div class="radio-direction">
+                <div class="radio-direction ps-0">
                   <input type="radio" class="input-direction" id="to-top" name="direction" value="1" />
                   <label class="custom-control-label" for="to-top">Top</label>
                 </div>
 
-                <div class="radio-direction">
+                <div class="radio-direction ps-0">
                   <input type="radio" class="input-direction" id="to-left" name="direction" value="2" />
                   <label class="custom-control-label" for="to-left">Left</label>
                 </div>
 
-                <div class="radio-direction">
+                <div class="radio-direction ps-0">
                   <input type="radio" class="input-direction" id="to-right" name="direction" value="3" />
                   <label class="custom-control-label" for="to-right">Right</label>
                 </div>
               </div>
             </div>
           </div>
-          <div class="container py-3" id="code">
+          <div class="container d-flex flex-column justify-content-center gap-2 py-3" id="code">
             <h3>CSS rule:</h3>
             <pre class="p-2 code-preview css-code"
-              id="code-preview"><code>background: linear-gradient(to bottom, #55d0ff, #ff9fb3);</code></pre>
+              id="code-preview"><code class="p-2">background: linear-gradient(to bottom, #55d0ff, #ff9fb3);</code></pre>
           </div>
           <div class="position-absolute d-flex justify-content-end align-items-center d-inline-block"
             id="buttons-wrapper">
@@ -124,10 +126,7 @@
                   <h5 class="card-header">Gradient Background Generator</h5>
                   <div class="card-body">
                     <div class="card-text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Odit enim cumque odio quisquam unde expedita doloribus
-                      quidem nemo consequuntur a minus nostrum, doloremque
-                      sapiente esse sint tempora exercitationem quis dolores!
+                      A simple tool to generate random CSS gradient background.
                     </div>
                   </div>
                   <div class="card-footer text-center">
