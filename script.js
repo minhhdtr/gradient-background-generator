@@ -27,11 +27,17 @@ const randomColor = () => {
   return `#${color}`;
 };
 
-// change css code content
-const setCssCode = (color1, color2, direction) => {
-  $(".code-preview").text(
-    `background: linear-gradient(${direction}, ${color1}, ${color2});`
-  );
+// change title gradient color on hover
+const setGradientTitle = (color1, color2) => {
+  $("#title").hover(function () {
+    $("#title").css("background", `linear-gradient(${color1}, ${color2})`);
+    $("#title").css("color", "transparent");
+    $("#title").css("-webkit-background-clip", "text");
+  });
+  $("#title").mouseleave(function () {
+    $("#title").css("background", "none");
+    $("#title").css("color", "inherit");
+  });
 };
 
 // set gradient background and change color code content
@@ -44,8 +50,16 @@ const setGradientBackground = (color1, color2, direction) => {
   $(".color-code-2 pre code").text(color2);
 };
 
-// set gradient background and change css code content
+// change css code content
+const setCssCode = (color1, color2, direction) => {
+  $(".code-preview code").text(
+    `background: linear-gradient(${direction}, ${color1}, ${color2});`
+  );
+};
+
+// change title, gradient background and css code content
 const helper = (color1, color2, direction) => {
+  setGradientTitle(color1, color2);
   setGradientBackground(color1, color2, direction);
   setCssCode(color1, color2, direction);
 };
@@ -54,14 +68,16 @@ color1.on("input", () => {
   helper(
     color1.val(),
     color2.val(),
-    directions[$('input[name="direction"]:checked').val()]);
+    directions[$('input[name="direction"]:checked').val()]
+  );
 });
 
 color2.on("input", () => {
   helper(
     color1.val(),
     color2.val(),
-    directions[$('input[name="direction"]:checked').val()]);
+    directions[$('input[name="direction"]:checked').val()]
+  );
 });
 
 $("#btn-random-1").on("click", () => {
@@ -69,7 +85,8 @@ $("#btn-random-1").on("click", () => {
   helper(
     color1.val(),
     color2.val(),
-    directions[$('input[name="direction"]:checked').val()]);
+    directions[$('input[name="direction"]:checked').val()]
+  );
 });
 
 $("#btn-random-2").on("click", () => {
@@ -77,12 +94,14 @@ $("#btn-random-2").on("click", () => {
   helper(
     color1.val(),
     color2.val(),
-    directions[$('input[name="direction"]:checked').val()]);
+    directions[$('input[name="direction"]:checked').val()]
+  );
 });
 
 $('input[name="direction"]').on("change", () => {
   helper(
     color1.val(),
     color2.val(),
-    directions[$('input[name="direction"]:checked').val()]);
+    directions[$('input[name="direction"]:checked').val()]
+  );
 });

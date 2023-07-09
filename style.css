@@ -42,7 +42,13 @@ body {
 }
 
 #title {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
+}
+
+#title:hover {
+  background: linear-gradient(#55d0ff, #ff9fb3);
+  color: transparent;
+  -webkit-background-clip: text;
 }
 
 #buttons-wrapper {
@@ -85,7 +91,7 @@ input[type="color"] {
   border-radius: 6px;
 }
 
-.css-code>code {
+.css-code > code {
   font-family: "Fira Code", monospace;
   font-size: 14px;
   line-height: 21px;
