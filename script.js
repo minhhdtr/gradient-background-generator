@@ -29,15 +29,20 @@ const randomColor = () => {
 
 // change title gradient color on hover
 const setGradientTitle = (color1, color2) => {
-  $("#title").hover(function () {
-    $("#title").css("background", `linear-gradient(${color1}, ${color2})`);
-    $("#title").css("color", "transparent");
-    $("#title").css("-webkit-background-clip", "text");
-  });
-  $("#title").mouseleave(function () {
-    $("#title").css("background", "none");
-    $("#title").css("color", "inherit");
-  });
+  $("#title").hover(
+    () => {
+      $("#title").css(
+        "background",
+        `linear-gradient(90deg, ${color1}, ${color2})`
+      );
+      $("#title").css("color", "transparent");
+      $("#title").css("-webkit-background-clip", "text");
+    }, () => {
+      $("#title").css("background", "none");
+      $("#title").css("color", "inherit");
+    }
+  );
+
 };
 
 // set gradient background and change color code content

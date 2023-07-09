@@ -46,9 +46,10 @@ body {
 }
 
 #title:hover {
-  background: linear-gradient(#55d0ff, #ff9fb3);
+  background: linear-gradient(90deg, #55d0ff, #ff9fb3);
   color: transparent;
   -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #buttons-wrapper {
@@ -91,7 +92,7 @@ input[type="color"] {
   border-radius: 6px;
 }
 
-.css-code > code {
+.css-code>code {
   font-family: "Fira Code", monospace;
   font-size: 14px;
   line-height: 21px;
