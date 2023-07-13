@@ -49,6 +49,7 @@ body {
   background: linear-gradient(90deg, #55d0ff, #ff9fb3);
   color: transparent;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -66,6 +67,10 @@ body {
   position: absolute;
   top: 42px;
   right: 15px;
+}
+
+#collapse-about .card {
+  width: 16rem;
 }
 
 .color-wrapper {

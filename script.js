@@ -8,11 +8,11 @@ $(document).on("click", function (event) {
 // toggle light/dark mode
 $(".btn.btn-toggle").on("click", () => {
   if (document.documentElement.getAttribute("data-bs-theme") == "dark") {
-    $(".btn-toggle i").removeClass("fa-sun").addClass("fa-moon");
     document.documentElement.setAttribute("data-bs-theme", "light");
+    $(".btn-toggle i").removeClass("fa-sun").addClass("fa-moon");
   } else {
-    $(".btn-toggle i").removeClass("fa-moon").addClass("fa-sun");
     document.documentElement.setAttribute("data-bs-theme", "dark");
+    $(".btn-toggle i").removeClass("fa-moon").addClass("fa-sun");
   }
 });
 
@@ -32,17 +32,29 @@ const setGradientTitle = (color1, color2) => {
   $("#title").hover(
     () => {
       $("#title").css(
-        "background",
-        `linear-gradient(90deg, ${color1}, ${color2})`
+        {
+          "background": `linear-gradient(90deg, ${color1}, ${color2})`,
+          "text": "transparent",
+          "-webkit-background-clip": "text",
+          "background-clip": "text",
+          "-webkit-text-fill-color": "transparent"
+        }
       );
-      $("#title").css("color", "transparent");
-      $("#title").css("-webkit-background-clip", "text");
     }, () => {
-      $("#title").css("background", "none");
-      $("#title").css("color", "inherit");
+      $("#title").css(
+        {
+          // "background": "none",
+          // "color": "inherit",
+          // "-webkit-text-fill-color": "unset"
+          "background": "",
+          "text": "",
+          "-webkit-background-clip": "",
+          "background-clip": "",
+          "-webkit-text-fill-color": ""
+        }
+      );
     }
   );
-
 };
 
 // set gradient background and change color code content
