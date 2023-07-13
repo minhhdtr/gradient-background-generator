@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en">
 
 <head>
   <!-- required meta tags -->
@@ -62,7 +62,7 @@
                   <pre class="m-0 p-2 css-code"><code>#55d0ff</code></pre>
                 </div>
               </div>
-              <button class="btn btn-secondary px-2 btn-random" id="btn-random-1">
+              <button class="btn btn-secondary px-2 btn-random" id="btn-random-1" role="button">
                 Random
               </button>
             </div>
@@ -75,7 +75,7 @@
                   <pre class="m-0 p-2 css-code"><code>#ff9fb3</code></pre>
                 </div>
               </div>
-              <button class="btn btn-secondary px-2 btn-random" id="btn-random-2">
+              <button class="btn btn-secondary px-2 btn-random" id="btn-random-2" role="button">
                 Random
               </button>
             </div>
@@ -115,7 +115,7 @@
             id="buttons-wrapper">
             <div class="container px-0" id="toggle-wrapper">
               <button class="btn btn-toggle" role="button">
-                <i class="fa-solid fa-sun"></i>
+                <i class="fa-solid fa-moon"></i>
               </button>
             </div>
             <div class="container px-0" id="about-wrapper">
@@ -126,10 +126,18 @@
               <div class="collapse" id="collapse-about">
                 <div class="card">
                   <h5 class="card-header">Gradient Background Generator</h5>
-                  <div class="card-body">
+                  <div class="card-body d-flex flex-column gap-1">
                     <div class="card-text">
                       A simple tool to generate random CSS gradient
-                      background.
+                      background for you.
+                    </div>
+                    <div class="card-text">
+                      <a class="icon-link"
+                        href="https://github.com/minhhdtr/gradient-background-generator" target="_blank"
+                        style="color: unset; text-decoration-color: unset;">
+                        <i class="fa-brands fa-github"></i>
+                        Github Repository
+                      </a>
                     </div>
                   </div>
                   <div class="card-footer text-center">
