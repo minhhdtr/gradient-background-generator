@@ -22,7 +22,9 @@ body {
 }
 
 .gradient-background {
-  background: linear-gradient(to bottom, #55d0ff, #ff9fb3);
+  background: linear-gradient(to bottom,
+      #55d0ff,
+      #ff9fb3);
 }
 
 .panel {
@@ -79,26 +81,19 @@ body {
 
 .color-picker {
   height: 100%;
-  border-radius: 6px;
+  aspect-ratio: 1 / 1;
 }
 
 input[type="color"] {
   height: 100%;
-}
-
-.btn-random {
-  height: 40px;
+  width: 100%;
 }
 
 .css-code {
-  font-family: "Fira Code", monospace;
-  font-size: 14px;
-  border: 1.5px solid #777777;
+  border: 1px solid #777777;
   border-radius: 6px;
 }
 
 .css-code>code {
   font-family: "Fira Code", monospace;
-  font-size: 14px;
-  line-height: 21px;
 }
